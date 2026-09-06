@@ -1,0 +1,45 @@
+{
+  "$schema": "https://raw.githubusercontent.com/93jessycollin93-del/jacky/main/superstation/spec/pod.manifest.schema.json",
+  "kernel": "1.0.0",
+  "pod": {
+    "id": "sas.pod.core-light-vault",
+    "name": "Core Light Vault",
+    "role": "vault",
+    "repo": "93jessycollin93-del/core-light-vault",
+    "summary": "Knowledge vault surface. Tagged 'condenser' in repos.json \u2014 holds compressed knowledge rather than producing it."
+  },
+  "provides": [
+    {
+      "id": "sas.vault.document",
+      "version": "1.0.0",
+      "title": "Stored knowledge documents"
+    },
+    {
+      "id": "sas.vault.search",
+      "version": "1.0.0",
+      "title": "Vault lookup",
+      "requires": [
+        "sas.vault.document"
+      ]
+    }
+  ],
+  "requires": [
+    {
+      "id": "sas.condense.compress",
+      "range": "1.x",
+      "optional": true
+    },
+    {
+      "id": "sas.route.ask",
+      "range": "1.x",
+      "optional": true
+    }
+  ],
+  "surfaces": [
+    {
+      "kind": "static",
+      "base": "/",
+      "note": "Vite/React + shadcn"
+    }
+  ]
+}
