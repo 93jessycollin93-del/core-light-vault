@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Python (Seedling subsystem)
+__pycache__/
+*.py[cod]
+.seedling-store.json
